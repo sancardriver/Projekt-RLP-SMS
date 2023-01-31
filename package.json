@@ -1,6 +1,6 @@
 {
   "name": "projekt-rlp-sms",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Projekt um eine SMS zur Anmeldung von Patienten im Rettungsdienstbereich Rheinhesse & Nahe zu erzeugen. Das Projekt soll eine datenschutzfreundliche, appartige und  vor allem benutzerfreundliche Variante sein solch eine SMS zu erzeugen. ",
   "repository": {
     "type": "git",
