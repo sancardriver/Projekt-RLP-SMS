@@ -7440,6 +7440,7 @@ function nextPrev(n) {
     if (n == 999) {
         resetAllSwitchs();
         currentTab = 0;
+        showTab(currentTab);
     } else if (n == 888){
         currentTab = 888;
         footer.classList.add('d-none');
@@ -7450,6 +7451,9 @@ function nextPrev(n) {
     }
     if ((currentTab >= x.length) && (currentTab != 777) && (currentTab != 888)) {
         webShare();
+        resetAllSwitchs();
+        currentTab = 0;
+        showTab(currentTab);
     }
     progress((100 / (x.length - 1)) * currentTab);
     showTab(currentTab);
