@@ -1,0 +1,34 @@
+{
+  "name": "projekt-rlp-sms",
+  "version": "0.0.1",
+  "description": "Projekt um eine SMS zur Anmeldung von Patienten im Rettungsdienstbereich Rheinhesse & Nahe zu erzeugen. Das Projekt soll eine datenschutzfreundliche, appartige und  vor allem benutzerfreundliche Variante sein solch eine SMS zu erzeugen. ",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-sancardriver:sancardriver/Projekt-RLP-SMS.git"
+  },
+  "keywords": [
+    "SMS",
+    "RLP",
+    "Anmeldung",
+    "Rheinhessen",
+    "Nahe",
+    "Rettungsdienst"
+  ],
+  "author": "Jonathan Starck",
+  "license": "SEE LICENSE IN LICENSE",
+  "devDependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3",
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-changed": "^4.0.3",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-filter": "^7.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "moment": "^2.29.4",
+    "sass": "^1.57.1"
+  }
+}
