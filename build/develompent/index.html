@@ -133,7 +133,7 @@
                             <label for="form-input-age" class="form-label">Alter angeben!*</label>
                             <div class="input-group">
                                 <input type="number" class="form-control" id="form-input-age"
-                                    aria-label="Alter des Patienten eingeben" required min="0" max="130">
+                                    aria-label="Alter des Patienten eingeben" required min="0" max="130" inputmode="decimal">
                                 <select id="form-select-ageunit" class="form-select" aria-label="Einheit" required>
                                     <option value="">Einheit auswählen</option>
                                     <option value="year" selected>Jahr(e)</option>
@@ -173,7 +173,7 @@
                             <label for="form-input-kg" class="form-label">Wie schwer ist die Person*</label>
                             <div class="input-group">
                                 <input type="number" class="form-control" id="form-input-kg" placeholder="150" min="150"
-                                    max="500">
+                                    max="500" inputmode="decimal">
                                 <span class="input-group-text">kgKG</span>
                                 <div class="invalid-feedback">Gewicht unter 150kgKG oder nicht plausibel!</div>
                             </div>
