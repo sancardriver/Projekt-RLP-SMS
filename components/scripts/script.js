@@ -492,10 +492,10 @@ async function webShare() {
     if (age.value == "1") {
         switch (ageunit.value) {
             case "day":
-                ageCorectUnit = "Tag";
+                ageCorectUnit = " Tag";
                 break;
             case "month":
-                ageCorectUnit = "Monat";
+                ageCorectUnit = " Monat";
                 break;
             default:
                 ageCorectUnit = "";
@@ -503,10 +503,10 @@ async function webShare() {
     } else {
         switch (ageunit.value) {
             case "day":
-                ageCorectUnit = "Tage";
+                ageCorectUnit = " Tage";
                 break;
             case "month":
-                ageCorectUnit = "Monate";
+                ageCorectUnit = " Monate";
                 break;
             default:
                 ageCorectUnit = "";
