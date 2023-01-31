@@ -1,5 +1,5 @@
 // Cache Version
-var cacheVersion = 'v0.0.1';
+var cacheVersion = 'v0.0.2';
 
 self.addEventListener('install', event => {
     // Cache anlegen

@@ -393,7 +393,7 @@ switchUseBirthdayPicker.addEventListener("change", function () {
     }
 });
 
-inputBirthday.addEventListener("change", function () {
+inputBirthday.addEventListener("input", function () {
     var inputBirthdayValid = inputBirthday.checkValidity();
     console.log(inputBirthdayValid);
     if (!inputBirthdayValid) {
@@ -408,7 +408,7 @@ inputBirthday.addEventListener("change", function () {
     }
 });
 
-inputBirthdayPicker.addEventListener("change", function () {
+inputBirthdayPicker.addEventListener("input", function () {
     var inputBirthdayPickerValid = inputBirthdayPicker.checkValidity();
     if (!inputBirthdayPickerValid) {
         inputBirthdayPickerValid = false;

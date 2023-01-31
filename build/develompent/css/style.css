@@ -10842,44 +10842,114 @@ textarea.form-control-lg {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
 }
 
-.form-check-input {
-  clear: left;
-}
-
 .form-switch.form-switch-sm {
-  margin-bottom: 0.5rem;
+  padding-left: 2.5em;
 }
 .form-switch.form-switch-sm .form-check-input {
-  height: 1rem;
-  width: calc(1rem + 0.75rem);
-  border-radius: 2rem;
+  width: 2em;
+  height: 1em;
+  margin-left: -2.5em;
+  margin-top: 0.25em;
+  border-radius: 2em;
+}
+.form-switch.form-switch-sm .form-check-label {
+  margin-top: 0em;
+}
+.form-switch.form-switch-sm.form-check-reverse {
+  padding-right: 2.5em;
+  padding-left: 0;
+}
+.form-switch.form-switch-sm.form-check-reverse .form-check-input {
+  margin-right: -2.5em;
+  margin-left: 0;
 }
 
 .form-switch.form-switch-md {
-  margin-bottom: 1rem;
+  padding-left: 3em;
 }
 .form-switch.form-switch-md .form-check-input {
-  height: 1.5rem;
-  width: calc(2rem + 0.75rem);
-  border-radius: 3rem;
+  width: 2.5em;
+  height: 1.3em;
+  margin-left: -3em;
+  margin-top: 0.25em;
+  border-radius: 2.5em;
+}
+.form-switch.form-switch-md .form-check-label {
+  margin-top: 0.14em;
+}
+.form-switch.form-switch-md.form-check-reverse {
+  padding-right: 3em;
+  padding-left: 0;
+}
+.form-switch.form-switch-md.form-check-reverse .form-check-input {
+  margin-right: -3em;
+  margin-left: 0;
 }
 
 .form-switch.form-switch-lg {
-  margin-bottom: 1.5rem;
+  padding-left: 3.5em;
 }
 .form-switch.form-switch-lg .form-check-input {
-  height: 2rem;
-  width: calc(3rem + 0.75rem);
-  border-radius: 4rem;
+  width: 3em;
+  height: 1.6em;
+  margin-left: -3.5em;
+  margin-top: 0.4em;
+  border-radius: 3em;
+}
+.form-switch.form-switch-lg .form-check-label {
+  margin-top: 0.48em;
+}
+.form-switch.form-switch-lg.form-check-reverse {
+  padding-right: 3.5em;
+  padding-left: 0;
+}
+.form-switch.form-switch-lg.form-check-reverse .form-check-input {
+  margin-right: -3.5em;
+  margin-left: 0;
 }
 
 .form-switch.form-switch-xl {
-  margin-bottom: 2rem;
+  padding-left: 4em;
 }
 .form-switch.form-switch-xl .form-check-input {
-  height: 2.5rem;
-  width: calc(4rem + 0.75rem);
-  border-radius: 5rem;
+  width: 3.5em;
+  height: 1.9em;
+  margin-left: -4em;
+  margin-top: 0.6em;
+  border-radius: 3.5em;
+}
+.form-switch.form-switch-xl .form-check-label {
+  margin-top: 0.75em;
+}
+.form-switch.form-switch-xl.form-check-reverse {
+  padding-right: 4em;
+  padding-left: 0;
+}
+.form-switch.form-switch-xl.form-check-reverse .form-check-input {
+  margin-right: -4em;
+  margin-left: 0;
+}
+
+.form-switch.form-switch-xxl {
+  padding-left: 4.5em;
+}
+.form-switch.form-switch-xxl .form-check-input {
+  width: 4em;
+  height: 2.2em;
+  margin-left: -4.5em;
+  margin-top: 0.8em;
+  border-radius: 4em;
+}
+.form-switch.form-switch-xxl .form-check-label {
+  margin-top: 1.18em;
+}
+.form-switch.form-switch-xxl.form-check-reverse {
+  padding-right: 4.5em;
+  padding-left: 0;
+}
+.form-switch.form-switch-xxl.form-check-reverse .form-check-input {
+  margin-right: -4.5em;
+  margin-left: 0;
 }
 /* lato-100 - latin-ext_latin */
 @font-face {
@@ -10994,4 +11064,8 @@ textarea.form-control-lg {
 /* Hinzufügen von neuen Regelungen */
 img.logo-rlp-sms {
   max-width: 45rem !important;
+}
+
+#footer {
+  background: var(--bs-body-bg);
 }

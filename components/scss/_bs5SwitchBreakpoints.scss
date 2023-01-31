@@ -1,30 +1,77 @@
 @mixin switch($res: 'sm') {
-    $index: 1rem;
-    $mainVal: 1rem;
-    @if $res == 'md' {
-        $index: 2rem;
-        $mainVal: 1.5rem;
-    } @else if $res == 'lg' {
-        $index: 3rem;
-        $mainVal: 2rem;
-    } @else if $res == 'xl' {
-        $index: 4rem;
-        $mainVal: 2.5rem;
-    }
-    margin-bottom: calc($index / 2);
-    .form-check-input {
-        height: $mainVal;
-        width: calc(#{$index} + 0.75rem);
-        border-radius: $mainVal * 2;
-    }
-}
+    $form-switch-width: 2em;
+    $form-switch-width-extra: 0em;
+    $form-switch-height: 1em;
+    $form-switch-padding-start: calc(calc($form-switch-width + $form-switch-width-extra) + .5em);
+    $form-switch-border-radius: calc($form-switch-width + $form-switch-width-extra);
+    $form-switch-margin-top: 0.25em;
+    $form-switch-label-margin-top: 0em;
 
-.form-check-input {
-  clear: left;
+    @if $res=='md' {
+        $form-switch-width: 2em;
+        $form-switch-width-extra: 0.5em;
+        $form-switch-height: 1.3em;
+        $form-switch-padding-start: calc(calc($form-switch-width + $form-switch-width-extra) + .5em);
+        $form-switch-border-radius: calc($form-switch-width + $form-switch-width-extra);
+        $form-switch-margin-top: 0.25em;
+        $form-switch-label-margin-top: 0.14em;
+    }
+
+    @else if $res=='lg' {
+        $form-switch-width: 2em;
+        $form-switch-width-extra: 1em;
+        $form-switch-height: 1.6em;
+        $form-switch-padding-start: calc(calc($form-switch-width + $form-switch-width-extra) + .5em);
+        $form-switch-border-radius: calc($form-switch-width + $form-switch-width-extra);
+        $form-switch-margin-top: 0.4em;
+        $form-switch-label-margin-top: 0.48em;
+    }
+
+    @else if $res=='xl' {
+        $form-switch-width: 2em;
+        $form-switch-width-extra: 1.5em;
+        $form-switch-height: 1.9em;
+        $form-switch-padding-start: calc(calc($form-switch-width + $form-switch-width-extra) + .5em);
+        $form-switch-border-radius: calc($form-switch-width + $form-switch-width-extra);
+        $form-switch-margin-top: 0.6em;
+        $form-switch-label-margin-top: 0.75em;
+    }
+
+    @else if $res=='xxl' {
+        $form-switch-width: 2em;
+        $form-switch-width-extra: 2em;
+        $form-switch-height: 2.2em;
+        $form-switch-padding-start: calc(calc($form-switch-width + $form-switch-width-extra) + .5em);
+        $form-switch-border-radius: calc($form-switch-width + $form-switch-width-extra);
+        $form-switch-margin-top: 0.8em;
+        $form-switch-label-margin-top: 1.18em;
+    }
+
+    padding-left: $form-switch-padding-start;
+
+    .form-check-input {
+        width: calc($form-switch-width + $form-switch-width-extra);
+        height: $form-switch-height;
+        margin-left: $form-switch-padding-start * -1;
+        margin-top: $form-switch-margin-top;
+        @include border-radius($form-switch-border-radius);
+    }
+    .form-check-label {
+        margin-top: $form-switch-label-margin-top;
+    }
+    &.form-check-reverse {
+        padding-right: $form-switch-padding-start;
+        padding-left: 0;
+    
+        .form-check-input {
+          margin-right: $form-switch-padding-start * -1;
+          margin-left: 0;
+        }
+    }
 }
 
 .form-switch.form-switch-sm {
-    @include switch();
+    @include switch('sm');
 }
 
 .form-switch.form-switch-md {
@@ -37,4 +84,8 @@
 
 .form-switch.form-switch-xl {
     @include switch('xl');
+}
+
+.form-switch.form-switch-xxl {
+    @include switch('xxl');
 }
