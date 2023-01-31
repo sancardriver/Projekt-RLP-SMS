@@ -5,8 +5,9 @@ var cleanCSS = require('gulp-clean-css');
 var changed = require("gulp-changed");
 var imagemin = require("gulp-imagemin");
 var sass = require('gulp-sass')(require('sass'));
-var minHTML = require('gulp-htmlmin');;
-const copy = require('gulp-copy');
+var minHTML = require('gulp-htmlmin');
+var version = require('gulp-version-number');
+var copy = require('gulp-copy');
 
 var scripts = {
   dev: {
@@ -139,7 +140,8 @@ var staticFiles = [
   'build/develompent/manifest.json',
   'build/develompent/favicon.ico',
   'build/develompent/icon.png',
-  'build/develompent/tile.png'
+  'build/develompent/tile.png',
+  'build/develompent/fonts/*'
 ];
 
 
