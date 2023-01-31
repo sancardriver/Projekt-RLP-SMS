@@ -10988,3 +10988,17 @@ textarea.form-control-lg {
   src: local(""), url("/fonts/lato-v23-latin-ext_latin-900italic.eot?#iefix") format("embedded-opentype"), url("/fonts/lato-v23-latin-ext_latin-900italic.woff2") format("woff2"), url("/fonts/lato-v23-latin-ext_latin-900italic.woff") format("woff"), url("/fonts/lato-v23-latin-ext_latin-900italic.ttf") format("truetype"), url("/fonts/lato-v23-latin-ext_latin-900italic.svg#Lato") format("svg");
   /* Legacy iOS */
 }
+@charset "UTF-8";
+@media (min-width: 992px) {
+  .rounded-lg-3 {
+    border-radius: 0.3rem;
+  }
+}
+#fnUnavailableButton {
+  display: none;
+}
+
+/* Hinzufügen von neuen Regelungen */
+img.logo-rlp-sms {
+  max-width: 45rem !important;
+}
