@@ -5,6 +5,8 @@ var cleanCSS = require('gulp-clean-css');
 var changed = require("gulp-changed");
 var imagemin = require("gulp-imagemin");
 var sass = require('gulp-sass')(require('sass'));
+var minHTML = require('gulp-htmlmin');;
+const copy = require('gulp-copy');
 
 var scripts = {
   dev: {
@@ -32,6 +34,9 @@ var scripts = {
     }
   }
 }
+
+var imgSrc = 'build/develompent/img/**/*';
+var imgDest = 'build/productive/img';
 
 var styles = {
   dev: {
@@ -87,6 +92,13 @@ function compileDarkScss() {
     .pipe(gulp.dest('build/develompent/css'));
 }
 
+function copyManifestToDev() {
+  return gulp.src(['components/manifest/manifest.json'])
+    .pipe(copy('build/develompent', {
+      prefix: 2
+    }))
+}
+
 function compressJsFiles() {
   return gulp.src(scripts.live.javascript.files)
     .pipe(uglify())
@@ -115,6 +127,36 @@ function compressDarkCss() {
     .pipe(gulp.dest('build/productive/css'));
 }
 
+function compressHTML() {
+  return gulp.src('build/develompent/index.html')
+    .pipe(minHTML({
+      collapseWhitespace: true
+    }))
+    .pipe(gulp.dest('build/productive/'));
+}
+
+var staticFiles = [
+  'build/develompent/manifest.json',
+  'build/develompent/favicon.ico',
+  'build/develompent/icon.png',
+  'build/develompent/tile.png'
+];
+
+
+function copyStaticToLive() {
+  return gulp.src(staticFiles)
+    .pipe(copy('build/productive', {
+      prefix: 2
+    }));
+}
+
+function compressImages() {
+  return gulp.src(imgSrc)
+    .pipe(changed(imgDest))
+    .pipe(imagemin())
+    .pipe(gulp.dest(imgDest));
+}
+
 function watch() {
   gulp.watch(scripts.dev.javascript.files, bundleJsFiles);
   gulp.watch(scripts.dev.javascript.serviceWorker, createServiceWorker);
@@ -122,8 +164,8 @@ function watch() {
   gulp.watch(styles.dev.scss.dark, compileDarkScss);
 }
 
-var dev = gulp.series(gulp.parallel(compileDarkScss, compileLightScss, bundleJsFiles, createServiceWorker));
-var live = gulp.series(gulp.parallel(compressJsFiles, compressServiceWorker, compressLightCss, compressDarkCss));
+var dev = gulp.series(gulp.parallel(compileDarkScss, compileLightScss, bundleJsFiles, createServiceWorker, copyManifestToDev));
+var live = gulp.series(gulp.parallel(compressJsFiles, compressServiceWorker, compressLightCss, compressDarkCss, compressHTML, compressImages, copyStaticToLive));
 
 exports.watch = watch;
 exports.buildDev = dev;
