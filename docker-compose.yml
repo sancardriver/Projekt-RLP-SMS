@@ -1,0 +1,18 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: ${CONTAINER_NAME}-nginx
+    restart: unless-stopped
+    environment:
+      NGINX_SERVER_NAME: ${NGINX_SERVER_NAME}
+      CONTAINER_NAME: ${CONTAINER_NAME}
+    volumes:
+      - ./build/productive:/var/www/html/rlp-sms
+      - ./components/nginx/templates:/etc/nginx/templates:rw,cached
+    networks:
+      - proxy
+      - default
+networks:
+  proxy:
+    external: true
+  default: {}
