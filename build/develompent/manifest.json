@@ -1,7 +1,7 @@
 {
     "name": "RLP SMS Anmeldung",
     "short_name": "RLP SMS",
-    "start_url": "/",
+    "start_url": "/?",
     "display": "standalone",
     "description": "Kleiner offline Patientenanmeldung-SMS-Generator zur Anmeldung von Patienten im Rettungsdienstbereich Scherer. Leider gibt es bis heute im Land Rheinland-Pfalz keinerlei adäquat, digital gestütze, Patientenanmeldung.",
     "lang": "de",

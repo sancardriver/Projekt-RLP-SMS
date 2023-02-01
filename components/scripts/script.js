@@ -190,9 +190,7 @@ function nextPrev(n) {
     }
     if ((currentTab >= x.length) && (currentTab != 777) && (currentTab != 888)) {
         webShare();
-        resetAllSwitchs();
-        currentTab = 0;
-        showTab(currentTab);
+        window.location.reload();
     }
     progress((100 / (x.length - 1)) * currentTab);
     showTab(currentTab);

@@ -7451,9 +7451,7 @@ function nextPrev(n) {
     }
     if ((currentTab >= x.length) && (currentTab != 777) && (currentTab != 888)) {
         webShare();
-        resetAllSwitchs();
-        currentTab = 0;
-        showTab(currentTab);
+        window.location.reload();
     }
     progress((100 / (x.length - 1)) * currentTab);
     showTab(currentTab);
@@ -7845,7 +7843,7 @@ function invokeServiceWorkerUpdateFlow(registration) {
     const reloadButton = document.getElementById("reloadButton");
     reloadButton.addEventListener("click", () => {
         if (registration.waiting) {
-            // let waiting Service Worker know it should became active
+            // Den wartenden Service Worker wissen lassen, dass er aktiv werden soll
             registration.waiting.postMessage("SKIP_WAITING");
         }
     });
@@ -7885,7 +7883,6 @@ if ("serviceWorker" in navigator) {
                 });
             }
         });
-
         let refreshing = false;
         navigator.serviceWorker.addEventListener("controllerchange", () => {
             if (!refreshing) {
